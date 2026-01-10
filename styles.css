@@ -1,0 +1,510 @@
+/* ========================================
+   ESTILOS PERSONALIZADOS LOS HALCONES FC
+   COLORES GRANATE/ROJO OSCURO
+   ======================================== */
+
+/* Variables de Colores - GRANATE/ROJO OSCURO */
+:root {
+    --primary-color: #8B0000;        /* Rojo oscuro/granate */
+    --secondary-color: #DC143C;      /* Crimson (rojo vibrante) */
+    --accent-color: #FFD700;         /* Dorado (para destacar) */
+    --dark-red: #5C0000;             /* Granate muy oscuro */
+    --text-dark: #2c3e50;
+    --text-light: #95a5a6;
+}
+
+/* Estilos Generales */
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar - GRANATE */
+.navbar {
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: var(--primary-color) !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Hero Section - Overlay Granate */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.85), rgba(92, 0, 0, 0.7));
+    z-index: -1;
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    animation: fadeInUp 1s ease;
+}
+
+.hero-content .text-warning {
+    color: var(--accent-color) !important;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stats Section - GRANATE/DORADO */
+.stats-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-red)) !important;
+}
+
+.stats-section h2 {
+    animation: countUp 2s ease;
+    color: white !important;
+}
+
+.stats-section p {
+    color: var(--accent-color) !important;
+}
+
+/* Categoria Cards */
+.categoria-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-top: 4px solid var(--primary-color);
+}
+
+.categoria-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(139, 0, 0, 0.3);
+    border-top-color: var(--secondary-color);
+}
+
+.categoria-card i {
+    transition: transform 0.3s ease;
+}
+
+.categoria-card:hover i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Icons Colors - Granate Theme */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-warning {
+    color: var(--accent-color) !important;
+}
+
+.text-success {
+    color: var(--secondary-color) !important;
+}
+
+.text-danger {
+    color: var(--dark-red) !important;
+}
+
+/* Buttons - GRANATE/DORADO */
+.btn {
+    transition: all 0.3s ease;
+    border-radius: 50px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, var(--accent-color), #FFA500);
+    border: none;
+    color: var(--dark-red);
+    font-weight: bold;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(135deg, #FFA500, var(--accent-color));
+    color: var(--dark-red);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+/* Forms */
+.form-control, .form-select {
+    border-radius: 10px;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(139, 0, 0, 0.25);
+}
+
+/* Cards */
+.card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(139, 0, 0, 0.15);
+}
+
+/* Testimonios */
+.card-body img {
+    object-fit: cover;
+}
+
+/* Secciones con fondo Granate */
+.bg-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-red)) !important;
+}
+
+.bg-dark {
+    background: var(--dark-red) !important;
+}
+
+/* Inscripción Section */
+#inscripcion {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+}
+
+/* Metodología Icons - Granate Theme */
+.bg-primary.text-white.rounded-circle {
+    background: var(--primary-color) !important;
+}
+
+.bg-success.text-white.rounded-circle {
+    background: var(--secondary-color) !important;
+}
+
+.bg-warning.text-dark.rounded-circle {
+    background: var(--accent-color) !important;
+}
+
+/* Instalaciones Section */
+#instalaciones {
+    background: linear-gradient(135deg, var(--dark-red), #000) !important;
+}
+
+/* Contacto Cards */
+#contacto .bg-light {
+    border-left: 4px solid var(--primary-color);
+}
+
+#contacto .bg-light:hover {
+    background: linear-gradient(135deg, #f8f9fa, #fff0f0) !important;
+}
+
+/* Footer - GRANATE OSCURO */
+footer {
+    background: linear-gradient(135deg, var(--dark-red), #000) !important;
+}
+
+footer a:hover {
+    color: var(--accent-color) !important;
+    transform: translateX(5px);
+}
+
+/* Stars Rating - Dorado */
+.text-warning.mb-2 i {
+    color: var(--accent-color) !important;
+}
+
+/* Navbar Brand Icon */
+.navbar-brand i {
+    color: var(--accent-color) !important;
+}
+
+/* Checkmarks - Granate */
+.bi-check-circle-fill {
+    color: var(--secondary-color) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .display-5 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Scroll Animations */
+[data-aos] {
+    pointer-events: auto;
+}
+
+/* Image Hover Effects */
+img {
+    transition: all 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Links */
+footer a {
+    transition: all 0.3s ease;
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Success Message Animation */
+#mensajeExito {
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Scrollbar - Granate */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Borders y Highlights - Granate */
+.border-top {
+    border-top-color: var(--primary-color) !important;
+}
+
+hr {
+    background: var(--primary-color);
+}
+
+/* Links hover effect */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Categoria específica colors */
+.bi-balloon-fill {
+    color: var(--primary-color) !important;
+}
+
+.bi-star-fill {
+    color: var(--accent-color) !important;
+}
+
+.bi-trophy-fill {
+    color: var(--secondary-color) !important;
+}
+
+.bi-lightning-fill {
+    color: var(--dark-red) !important;
+}
+
+/* Alert Success con tema Granate */
+.alert-success {
+    background-color: rgba(220, 20, 60, 0.1);
+    border-color: var(--secondary-color);
+    color: var(--dark-red);
+}
+
+/* Prueba Gratis Button */
+.btn-success {
+    background: #25d366 !important;
+    border: none;
+}
+
+.btn-success:hover {
+    background: #128C7E !important;
+}
+
+/* Logo del equipo en Navbar */
+.logo-navbar {
+    height: 45px;
+    width: 45px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+}
+
+.logo-navbar:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Logo grande para Hero Section */
+.logo-hero {
+    height: 120px;
+    width: 120px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+    animation: fadeInScale 1.2s ease;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Logo en Footer */
+.logo-footer {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+    opacity: 0.9;
+    filter: brightness(1.1);
+}
+
+/* Responsive Logo */
+@media (max-width: 768px) {
+    .logo-navbar {
+        height: 35px;
+        width: 35px;
+    }
+    
+    .logo-hero {
+        height: 80px;
+        width: 80px;
+    }
+    
+    .logo-footer {
+        height: 60px;
+        width: 60px;
+    }
+}

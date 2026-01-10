@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Halcones FC - Academia de Fútbol | Chiclayo, Lambayeque</title>
+    <link rel="icon" type="image/png" href="imagenes/Logo_Halcones.png">
+
+    <meta name="description" content="Academia de fútbol Los Halcones en Chiclayo. Formación integral niños y jóvenes 4-19 años. ¡Inscripciones abiertas!">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#inicio">
+                <img src="imagenes/Logo_Halcones.png" alt="Logo Los Halcones" class="logo-navbar me-2"> 
+                LOS HALCONES FC
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#instalaciones">Instalaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-warning text-dark ms-2" href="#inscripcion">¡Inscríbete!</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section con Video Background -->
+    <section id="inicio" class="hero-section position-relative">
+        <div class="video-overlay"></div>
+        <!-- Reemplaza con tu video de entrenamientos -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/video-hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content text-center text-white">
+            <img src="imagenes/Logo_Halcones.png" alt="Escudo Los Halcones" class="logo-hero" data-aos="zoom-in">
+
+            <div data-aos="fade-up">
+                <h1 class="display-2 fw-bold mb-4">ACADEMIA DE FÚTBOL<br><span class="text-warning">LOS HALCONES</span></h1>
+                <p class="lead fs-3 mb-5">Formando campeones dentro y fuera de la cancha</p>
+
+                <p class="fs-5 mb-5">📍 Chiclayo, Lambayeque | ⚽ Categorías 4-19 años</p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="#inscripcion" class="btn btn-warning btn-lg px-5 py-3 fw-bold">
+                        <i class="bi bi-clipboard-check"></i> INSCRIPCIONES ABIERTAS
+                    </a>
+                    <a href="#prueba-gratis" class="btn btn-outline-light btn-lg px-5 py-3">
+                        <i class="bi bi-gift"></i> PRUEBA GRATIS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contador Stats -->
+    <section class="stats-section bg-warning py-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in">
+                    <h2 class="display-4 fw-bold text-dark mb-0">150+</h2>
+                    <p class="text-dark mb-0">Jugadores Activos</p>
+                </div>
+                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="100">
+                    <h2 class="display-4 fw-bold text-dark mb-0">8</h2>
+                    <p class="text-dark mb-0">Categorías</p>
+                </div>
+                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="200">
+                    <h2 class="display-4 fw-bold text-dark mb-0">15+</h2>
+                    <p class="text-dark mb-0">Entrenadores</p>
+                </div>
+                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="300">
+                    <h2 class="display-4 fw-bold text-dark mb-0">5</h2>
+                    <p class="text-dark mb-0">Años Formando</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <img src="imagenes/Logo_Halcones.png" alt="Equipo Los Halcones" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="display-5 fw-bold mb-4">¿Quiénes Somos?</h2>
+                    <p class="lead">Los Halcones FC es una academia de fútbol comprometida con la formación integral de niños y jóvenes en Chiclayo, Lambayeque.</p>
+                    <p>Desarrollamos no solo habilidades técnicas y tácticas del fútbol, sino también valores fundamentales como:</p>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-3 me-3"></i>
+                                <span>Disciplina y Respeto</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-3 me-3"></i>
+                                <span>Trabajo en Equipo</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-3 me-3"></i>
+                                <span>Compromiso y Esfuerzo</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-3 me-3"></i>
+                                <span>Superación Personal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section id="categorias" class="bg-light py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold">Nuestras Categorías</h2>
+                <p class="lead">Entrenamientos personalizados por edad y nivel</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="flip-left">
+                    <div class="card h-100 shadow-sm border-0 categoria-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-balloon-fill text-primary fs-1 mb-3"></i>
+                            <h4 class="card-title fw-bold">Pre-Infantil</h4>
+                            <p class="text-muted">4-6 años</p>
+                            <p>Iniciación al fútbol con juegos recreativos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card h-100 shadow-sm border-0 categoria-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-star-fill text-warning fs-1 mb-3"></i>
+                            <h4 class="card-title fw-bold">Infantil</h4>
+                            <p class="text-muted">7-10 años</p>
+                            <p>Fundamentos técnicos y tácticos básicos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card h-100 shadow-sm border-0 categoria-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-trophy-fill text-success fs-1 mb-3"></i>
+                            <h4 class="card-title fw-bold">Juvenil</h4>
+                            <p class="text-muted">11-15 años</p>
+                            <p>Desarrollo competitivo y torneos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card h-100 shadow-sm border-0 categoria-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-lightning-fill text-danger fs-1 mb-3"></i>
+                            <h4 class="card-title fw-bold">Elite</h4>
+                            <p class="text-muted">16-19 años</p>
+                            <p>Alto rendimiento y proyección profesional</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodología -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold">Nuestra Metodología</h2>
+                <p class="lead">Entrenamiento profesional con tecnología moderna</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="text-center p-4">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="bi bi-camera-video fs-2"></i>
+                        </div>
+                        <h4 class="fw-bold">Análisis de Video</h4>
+                        <p>Grabamos entrenamientos y partidos para feedback visual personalizado</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-center p-4">
+                        <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="bi bi-graph-up fs-2"></i>
+                        </div>
+                        <h4 class="fw-bold">Seguimiento Digital</h4>
+                        <p>Portal de padres con estadísticas y progreso del jugador</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-center p-4">
+                        <div class="bg-warning text-dark rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="bi bi-heart-pulse fs-2"></i>
+                        </div>
+                        <h4 class="fw-bold">Nutrición Deportiva</h4>
+                        <p>Planes alimenticios personalizados para rendimiento óptimo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instalaciones -->
+    <section id="instalaciones" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold">Instalaciones</h2>
+                <p class="lead">Campos profesionales en Chiclayo</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <img src="imagenes/Logo_Halcones.png" alt="Cancha Principal" class="img-fluid rounded shadow">
+                    <h5 class="mt-3">Cancha Principal</h5>
+                    <p class="text-muted">Grass sintético profesional</p>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <img src="imagenes/Logo_Halcones.png" alt="Cancha de Entrenamiento" class="img-fluid rounded shadow">
+                    <h5 class="mt-3">Área de Entrenamiento</h5>
+                    <p class="text-muted">Espacios para drills y técnica</p>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <img src="imagenes/Logo_Halcones.png" alt="Vestidores" class="img-fluid rounded shadow">
+                    <h5 class="mt-3">Vestidores</h5>
+                    <p class="text-muted">Cómodos y seguros</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold">Lo Que Dicen Nuestras Familias</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card h-100 shadow border-0">
+                        <div class="card-body">
+                            <div class="text-warning mb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="card-text">"Mi hijo ha mejorado increíblemente en disciplina y técnica. Los entrenadores son excelentes y el ambiente familiar es único."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-person-fill text-white fs-4"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">María García</h6>
+                                    <small class="text-muted">Madre de jugador Sub-12</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 shadow border-0">
+                        <div class="card-body">
+                            <div class="text-warning mb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="card-text">"La metodología de Los Halcones es profesional. Mi hija no solo juega mejor, también estudia más y es más responsable."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-person-fill text-white fs-4"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Carlos Fernández</h6>
+                                    <small class="text-muted">Padre de jugadora Sub-10</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 shadow border-0">
+                        <div class="card-body">
+                            <div class="text-warning mb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="card-text">"Excelente organización y comunicación constante con los padres. Recomiendo Los Halcones al 100%."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-person-fill text-dark fs-4"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Ana Rodríguez</h6>
+                                    <small class="text-muted">Madre de jugador Sub-14</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inscripción -->
+    <section id="inscripcion" class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <h2 class="display-4 fw-bold mb-4">¡Inscríbete Ahora!</h2>
+                    <p class="lead mb-4">Únete a la familia Los Halcones y comienza tu camino al éxito</p>
+                    <ul class="list-unstyled fs-5">
+                        <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i> Primera clase gratis</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i> Uniforme incluido</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i> Seguro deportivo</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill me-2"></i> Acceso a portal de padres</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-4">
+                            <h4 class="text-dark fw-bold mb-4">Formulario de Inscripción</h4>
+                            <form id="inscripcionForm">
+                                <div class="mb-3">
+                                    <label class="form-label text-dark">Nombre del Jugador</label>
+                                    <input type="text" class="form-control" name="nombreJugador" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-dark">Edad</label>
+                                    <select class="form-select" name="edad" required>
+                                        <option value="">Selecciona edad...</option>
+                                        <option value="4-6">4-6 años (Pre-Infantil)</option>
+                                        <option value="7-10">7-10 años (Infantil)</option>
+                                        <option value="11-15">11-15 años (Juvenil)</option>
+                                        <option value="16-19">16-19 años (Elite)</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-dark">Nombre del Padre/Tutor</label>
+                                    <input type="text" class="form-control" name="nombrePadre" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-dark">Teléfono/WhatsApp</label>
+                                    <input type="tel" class="form-control" name="telefono" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-dark">Email</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-dark">¿Tiene experiencia previa en fútbol?</label>
+                                    <select class="form-select" name="experiencia" required>
+                                        <option value="">Selecciona...</option>
+                                        <option value="ninguna">Ninguna</option>
+                                        <option value="basica">Básica (menos de 1 año)</option>
+                                        <option value="intermedia">Intermedia (1-3 años)</option>
+                                        <option value="avanzada">Avanzada (más de 3 años)</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-warning w-100 py-3 fw-bold">
+                                    <i class="bi bi-send-fill"></i> ENVIAR INSCRIPCIÓN
+                                </button>
+                            </form>
+                            <div id="mensajeExito" class="alert alert-success mt-3 d-none">
+                                <i class="bi bi-check-circle-fill"></i> ¡Inscripción enviada! Te contactaremos pronto.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prueba Gratis -->
+    <section id="prueba-gratis" class="py-5 bg-light">
+        <div class="container text-center" data-aos="zoom-in">
+            <h2 class="display-5 fw-bold mb-4">¿Aún tienes dudas?</h2>
+            <p class="lead mb-4">Reserva tu clase de prueba GRATIS</p>
+            <a href="https://wa.me/51XXXXXXXXX?text=Hola,%20quiero%20reservar%20una%20clase%20de%20prueba%20gratis" 
+               class="btn btn-success btn-lg px-5 py-3" target="_blank">
+                <i class="bi bi-whatsapp"></i> RESERVAR POR WHATSAPP
+            </a>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold">Contáctanos</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="text-center p-4 bg-light rounded">
+                        <i class="bi bi-geo-alt-fill text-primary fs-1 mb-3"></i>
+                        <h5 class="fw-bold">Ubicación</h5>
+                        <p>Estadio Pucalá<br>Pucalá, Chiclayo - Lambayeque</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center p-4 bg-light rounded">
+                        <i class="bi bi-telephone-fill text-success fs-1 mb-3"></i>
+                        <h5 class="fw-bold">Teléfono</h5>
+                        <p>+51 949 356 883<br>Jue-Vier 4am-6pm</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center p-4 bg-light rounded">
+                        <i class="bi bi-envelope-fill text-danger fs-1 mb-3"></i>
+                        <h5 class="fw-bold">Email</h5>
+                        <p>mb2571079@gmail.com
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mapa con información del Estadio Pucalá -->
+            <div class="mt-5" data-aos="fade-up">
+                <h4 class="text-center mb-4"><i class="bi bi-map-fill text-danger"></i> Encuéntranos en el Estadio Pucalá</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.89941536384422!2d-79.52436969213874!3d-6.744114269037989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904ce0f8055c3c91%3A0xd7e3b7c0c55e3e3c!2sEstadio%20Pucala!5e0!3m2!1ses-419!2spe!4v1736545043000!5m2!1ses-419!2spe" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: 10px; box-shadow: 0 4px 15px rgba(139,0,0,0.2);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+                <!-- Información debajo del mapa -->
+                <div class="text-center mt-4">
+                    <p class="mb-2">
+                        <i class="bi bi-pin-map-fill text-danger fs-4"></i> 
+                        <strong class="fs-5">Estadio Pucalá</strong>
+                    </p>
+                    <p class="text-muted">
+                        698R+G67, Pucalá 14631<br>
+                        Chiclayo, Lambayeque - Perú
+                    </p>
+                    <a href="https://maps.app.goo.gl/1E2X5s5rx39yykty5" target="_blank" class="btn btn-outline-danger">
+                        <i class="bi bi-map"></i> Cómo llegar (Google Maps)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="imagenes/Logo_Halcones.png" alt="Escudo Los Halcones" class="logo-footer mb-3">
+
+                    <h5 class="fw-bold mb-3">LOS HALCONES FC</h5>
+                    <p class="text-light">Formando campeones dentro y fuera de la cancha desde 2020.</p>
+
+                    <div class="d-flex gap-3 fs-4">
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#nosotros" class="text-white-50 text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="#categorias" class="text-white-50 text-decoration-none">Categorías</a></li>
+                        <li class="mb-2"><a href="#testimonios" class="text-white-50 text-decoration-none">Testimonios</a></li>
+                        <li class="mb-2"><a href="#inscripcion" class="text-white-50 text-decoration-none">Inscripciones</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Horarios</h5>
+                    <p class="mb-1"><strong>Jueves</strong> 4:00 PM - 6:00 PM</p>
+                    <p class="mb-1"><strong>Viernes :</strong> 10:30 AM - 12:30 PM</p>
+                    
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 Los Halcones FC. Todos los derechos reservados.</p>
+                <p class="small text-white-50">Diseñado con ❤️ para formar campeones</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/51949356883?text=Hola%20Los%20Halcones%20FC%2C%20vengo%20desde%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20las%20inscripciones.%20%F0%9F%91%8B%E2%9A%BD" 
+    class="whatsapp-float" 
+    target="_blank" 
+    title="Contáctanos por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
