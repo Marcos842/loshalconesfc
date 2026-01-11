@@ -107,7 +107,7 @@ if (inscripcionForm) {
         try {
             // Enviar a Google Apps Script
             // NOTA: Con mode: 'no-cors' no podemos leer la respuesta, pero los datos SÍ se envían
-            fetch('https://script.google.com/macros/s/AKfycbzVMKRTU97EacsbRS8P2qMeL6ZJ-jPRn-X7KvGmqoa7Z6dfPYoNUZ9jyU8bDNV4hL1Z-g/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbzVMKRTU97EacsbRS8P2qMeL62l-jPRn-X7kv6mqoa7Z6dfPYoWuZ9jyW8bDNMWHLlZ-g/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
