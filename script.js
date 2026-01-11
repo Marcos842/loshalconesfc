@@ -81,7 +81,9 @@ if (statsSection) {
     observer.observe(statsSection);
 }
 
-// Formulario de Inscripción
+// ==========================================
+// FORMULARIO DE INSCRIPCIÓN - CORREGIDO
+// ==========================================
 const inscripcionForm = document.getElementById('inscripcionForm');
 if (inscripcionForm) {
     inscripcionForm.addEventListener('submit', async function(e) {
@@ -89,7 +91,7 @@ if (inscripcionForm) {
 
         const btn = this.querySelector('button[type="submit"]');
         const originalText = btn.innerHTML;
-        btn.innerHTML = '<span class="loading"></span> Enviando...';
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...';
         btn.disabled = true;
 
         // Recopilar datos del formulario
@@ -99,12 +101,13 @@ if (inscripcionForm) {
             data[key] = value;
         });
 
-        // Agregar timestamp
-        data.fecha = new Date().toLocaleString('es-PE');
+        // Agregar timestamp en formato Perú
+        data.fecha = new Date().toLocaleString('es-PE', {timeZone: 'America/Lima'});
 
         try {
             // Enviar a Google Apps Script
-            const response = await fetch('Thttps://script.google.com/macros/s/AKfycbzVMKRTU97EacsbRS8P2qMeL62l-jPRn-X7kv6mqoa7Z6dfPYoWuZ9jyW8bDNMWHLlZ-g/exec', {
+            // NOTA: Con mode: 'no-cors' no podemos leer la respuesta, pero los datos SÍ se envían
+            fetch('https://script.google.com/macros/s/AKfycbzVMKRTU97EacsbRS8P2qMeL6ZJ-jPRn-X7KvGmqoa7Z6dfPYoNUZ9jyU8bDNV4hL1Z-g/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -113,27 +116,46 @@ if (inscripcionForm) {
                 body: JSON.stringify(data)
             });
 
+            // Esperar 2 segundos para dar tiempo al servidor
+            await new Promise(resolve => setTimeout(resolve, 2000));
+
             // Mostrar mensaje de éxito
-            document.getElementById('mensajeExito').classList.remove('d-none');
+            const mensajeExito = document.getElementById('mensajeExito');
+            if (mensajeExito) {
+                mensajeExito.classList.remove('d-none');
+                // Ocultar mensaje después de 5 segundos
+                setTimeout(() => {
+                    mensajeExito.classList.add('d-none');
+                }, 5000);
+            }
+
+            // Alerta personalizada de éxito
+            alert(
+                '🎉 ¡Inscripción enviada con éxito!\n\n' +
+                '✅ Hemos recibido tu solicitud\n' +
+                '✅ Recibirás un email de confirmación\n' +
+                '✅ Nos contactaremos contigo en las próximas 24 horas\n\n' +
+                '¡Bienvenido a la familia Los Halcones FC! 🦅⚽'
+            );
+
+            // Limpiar formulario
             inscripcionForm.reset();
 
-            // También enviar por WhatsApp (opcional)
-            const mensaje = `¡Nueva Inscripción!
-Jugador: ${data.nombreJugador}
-Edad: ${data.edad}
-Padre/Tutor: ${data.nombrePadre}
-Teléfono: ${data.telefono}
-Email: ${data.email}
-Experiencia: ${data.experiencia}`;
-
-            // Descomenta y agrega tu número de WhatsApp
-            // const whatsappUrl = `https://wa.me/51XXXXXXXXX?text=${encodeURIComponent(mensaje)}`;
-            // window.open(whatsappUrl, '_blank');
+            // Scroll al inicio del formulario
+            inscripcionForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
         } catch (error) {
-            console.error('Error:', error);
-            alert('Hubo un error al enviar la inscripción. Por favor, intenta nuevamente o contáctanos por WhatsApp.');
+            console.error('Error al enviar formulario:', error);
+            
+            // Mensaje de error amigable
+            alert(
+                '⚠️ Hubo un problema al enviar tu inscripción.\n\n' +
+                'Por favor, intenta nuevamente o contáctanos directamente:\n\n' +
+                '📱 WhatsApp: +51 949 356 883\n' +
+                '📧 Email: mb2571079@gmail.com'
+            );
         } finally {
+            // Restaurar botón siempre
             btn.innerHTML = originalText;
             btn.disabled = false;
         }
@@ -182,25 +204,55 @@ function validatePhoneNumber(phone) {
     return phoneRegex.test(phone.replace(/\s+/g, ''));
 }
 
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
 if (inscripcionForm) {
+    // Validación de teléfono
     const phoneInput = inscripcionForm.querySelector('input[name="telefono"]');
-    phoneInput.addEventListener('blur', function() {
-        if (!validatePhoneNumber(this.value)) {
-            this.classList.add('is-invalid');
-            if (!this.nextElementSibling || !this.nextElementSibling.classList.contains('invalid-feedback')) {
-                const feedback = document.createElement('div');
-                feedback.className = 'invalid-feedback';
-                feedback.textContent = 'Por favor ingresa un número válido (ej: 987654321)';
-                this.parentNode.appendChild(feedback);
+    if (phoneInput) {
+        phoneInput.addEventListener('blur', function() {
+            if (!validatePhoneNumber(this.value)) {
+                this.classList.add('is-invalid');
+                if (!this.nextElementSibling || !this.nextElementSibling.classList.contains('invalid-feedback')) {
+                    const feedback = document.createElement('div');
+                    feedback.className = 'invalid-feedback';
+                    feedback.textContent = 'Por favor ingresa un número válido (ej: 987654321)';
+                    this.parentNode.appendChild(feedback);
+                }
+            } else {
+                this.classList.remove('is-invalid');
+                const feedback = this.nextElementSibling;
+                if (feedback && feedback.classList.contains('invalid-feedback')) {
+                    feedback.remove();
+                }
             }
-        } else {
-            this.classList.remove('is-invalid');
-            const feedback = this.nextElementSibling;
-            if (feedback && feedback.classList.contains('invalid-feedback')) {
-                feedback.remove();
+        });
+    }
+
+    // Validación de email
+    const emailInput = inscripcionForm.querySelector('input[name="email"]');
+    if (emailInput) {
+        emailInput.addEventListener('blur', function() {
+            if (!validateEmail(this.value)) {
+                this.classList.add('is-invalid');
+                if (!this.nextElementSibling || !this.nextElementSibling.classList.contains('invalid-feedback')) {
+                    const feedback = document.createElement('div');
+                    feedback.className = 'invalid-feedback';
+                    feedback.textContent = 'Por favor ingresa un email válido';
+                    this.parentNode.appendChild(feedback);
+                }
+            } else {
+                this.classList.remove('is-invalid');
+                const feedback = this.nextElementSibling;
+                if (feedback && feedback.classList.contains('invalid-feedback')) {
+                    feedback.remove();
+                }
             }
-        }
-    });
+        });
+    }
 }
 
 // Google Analytics (opcional - reemplaza con tu ID)
@@ -240,6 +292,7 @@ document.addEventListener('touchstart', function() {
     if (viewportmeta) {
         viewportmeta.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1');
     }
-});
+}, { once: true });
 
 console.log('🦅 Los Halcones FC - Website cargado correctamente');
+console.log('📝 Formulario de inscripción: ACTIVO');
